@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Jost:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Sora:wght@200;300;500;700&display=swap');
+
+:root {
+    --primary:aliceblue;
+    --secondary:rgb(200, 212, 142);
+    --bg:black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Sora', sans-serif;
+}
+
+h1, h2, a {
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.navbar {
+    background-color: var(--bg);
+    padding: .5rem 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.navbar a {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+.navbar a span {
+    color: var(--secondary);
+}
+
+.navbar-list {
+    display: inline-block;
+    align-items: center;
+}
+
+.navbar-list a {
+    color: var(--primary);
+    display: inline-block;
+    margin: .8rem;
+    font-size: .9rem;
+}
+.navbar-list a:hover {
+    color: var(--secondary);
+}
+
+.navbar-list a::after {
+    content: '';
+    display: block;
+    padding: .1rem;
+    border-bottom: .1rem solid var(--secondary);
+    transform: scaleX(0);
+    transition:0.2s linear;
+}
+.navbar-list a:hover::after {
+    transform: scaleX(.5);
+}
+#hamburger-menu {
+    display:none;
+}
+
+/* Home Start */
+#home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-nganggur {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-nganggur h1 {
+    font-size: 4rem;
+}
+
+.home-img {
+    display: flex;
+}
+
+.bungkus-home {
+    border: 2px solid black;
+    border-radius: 10%;
+    margin: 2rem 1rem;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+}
+.bungkus-home:hover {
+    transform: scale(1.07);
+    background-color: var(--secondary);
+}
+
+.home-img img {
+    width: 5rem;
+}
+
+.home-nganggur input {
+    margin: .8rem;
+    height: 3rem;
+    width: 10rem;
+    background-color: var(--bg);
+    color: var(--primary);
+    border: none;
+    border-radius: 1.3rem;
+    cursor: pointer;
+    font-family: 'Bruno Ace SC', cursive;
+    transition: .2s;
+}
+
+.home-nganggur input:hover {
+    transform: scale(1.06);
+    color: var(--secondary);
+}
+
+/* home end */
+
+/* avout start */
+#about {
+    height: 100vh;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg);
+    color: var(--primary);
+}
+.about-nganggur {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-nganggur img {
+    width: 100%;
+}
+
+.about-nganggur img:hover {
+    filter: grayscale(.8);
+}
+.about-nganggur-img-bungkus {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nganggur-about-text {
+    padding: 0 2%;
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.nganggur-about-text h1 {
+    font-size: 3em;
+}
+.nganggur-about-text h1:hover {
+    color: var(--secondary);
+}
+.nganggur-about-text h2 {
+    font-size: 2.5em;
+}
+/* about end */
+
+/* member start */
+#member {
+    height: 100vh;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+}
+
+.member-nganggur {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.member-nganggur-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.bungkus-member-img {
+    margin: 1rem;
+}
+.member-nganggur-img img {
+    width: 19rem;
+    transition: 0.4s;
+}
+.member-nganggur-img img:hover {
+    transform: scale(1.04);
+    filter: grayscale(.8);
+}
+.member-nganggur h1 {
+    font-size: 3em;
+}
+.member-nganggur h1:hover {
+    color: var(--secondary);
+}
+/* member end */
+
+/* gallery start */
+#gallery {
+    height: 100vh;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg);
+    color: var(--primary);
+}
+
+.gallery-nganggur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.gallery-nganggur-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-nganggur-img img{
+    width: 15rem;
+}
+.bungkus-gallery-img {
+    margin: 1rem;
+    transition: .3s;
+}
+.gallery-nganggur-img img:hover {
+    filter: grayscale(.8);
+}
+.gallery-nganggur h1 {
+    font-size: 3em;
+}
+.gallery-nganggur h1:hover {
+    color: var(--secondary);
+}
+
+.gallery-nganggur a {
+    color: var(--primary);
+}
+.gallery-nganggur a:hover {
+    color: var(--secondary);
+}
+/* gallery end */
+
+/* footer start */
+.footer {
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer a {
+    color: black;
+}
+.footer a:hover {
+    color: var(--secondary);
+}
+/* footer end */
+
+
+/* @media queries */
+
+/* laptop */
+@media (max-width:1366px){
+    html {
+        font-size: 90%;
+    }
+    .nganggur-about-text h1 {
+        font-size: 2.6rem;
+    }
+    .nganggur-about-text h2 {
+        font-size: 2.1rem;
+    }
+    .gallery-nganggur-img img{
+        width: 13.5rem;
+    }
+}
+
+/* fontnya */
+@media (max-width:1069px){
+    .nganggur-about-text h1 {
+        font-size: 2rem;
+    }
+    .nganggur-about-text h2 {
+        font-size: 1.6rem;
+    }
+    .member-nganggur-img img {
+        width: 12rem;
+    }
+}
+
+/* tablet */
+@media (max-width:768px){
+    html {
+        font-size: 80%;
+    }
+
+    #hamburger-menu {
+        display:inline-block;
+    }
+    #hamburger-menu:hover{
+        transform: scale(1.07);
+    }
+
+    .navbar-list {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: var(--bg);
+        width: 20rem;
+        height: 40vh;
+        transition: 0.3s;
+    }
+
+    .navbar-list a {
+        display: block;
+        margin: 2rem;
+        padding: 0.5rem;
+    }
+
+    .navbar-list.active {
+        right: 0;
+    }
+
+    .navbar-list a::after {
+        transform-origin: 0 0;
+    }
+    .navbar-list a:hover::after {
+        transform: scaleX(0.2);
+    }
+    .about-nganggur {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-nganggur-img-bungkus {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+    
+    .nganggur-about-text {
+        padding: 0;
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .gallery-nganggur-img img{
+        width: 11rem;
+    }
+
+}
+
+/* mobile phone */
+@media (max-width:450px){
+    html {
+        font-size: 70%;
+    }
+    .home-img img {
+        width: 3.5rem;
+    }
+    .member-nganggur-img img {
+        width: 9rem;
+    }
+    .gallery-nganggur-img img{
+        width: 8rem;
+    }
+}
+
+/* mobile phone mini */
+@media (max-width:300px){
+    html {
+        font-size: 40%;
+    }
+    .home-img img {
+        width: 3rem;
+    }
+    .member-nganggur-img img {
+        width: 7rem;
+    }
+}
